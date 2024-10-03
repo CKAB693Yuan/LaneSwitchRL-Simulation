@@ -15,7 +15,7 @@ RL-based simulation of lane-switching in traffic
 10. The environment clearance rate is modelled by the equation:  
     `vt,j = vt-1,j + N(0,0.1) + random_event + 0.2 × sgn(vt-1,j-1 − vt-1,j) + 0.2 × sgn(vt-1,j+1 − vt-1,j)`  
     Note: If no adjacent lane exists, the sgn() function can be ignored.
-11. `Random Event`: A 5% chance per time step for a lane to experience a slowdown of 20%~50% (uniform probability distribution) of vt-1,j, or 5% chance that the clearance rate is increased by 20~40% (also uniform probability distribution) of vt-1,j.
+11. `Random Event`: A 5% chance per time step for a lane to experience a slowdown of 20%-50% (uniform probability distribution) of vt-1,j, or 5% chance that the clearance rate is increased by 20-40% (also uniform probability distribution) of vt-1,j.
 12. `Unit Time`: This refers to every 10 seconds.
 13. Decision is based on historical records of `past three time steps` (t-2, t-1, t).
 14. The `state` contains three tuples of seven values corresponding to his location dt away from the destination, his lane lt, and the clearance rate vt,j for each of the 5 lanes (j 𝜖 {1,2,3,4,5}).
